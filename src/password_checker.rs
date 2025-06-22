@@ -1,11 +1,10 @@
-use crate::password_errors::PasswordErrors;
+//! This module provides a function to validate passwords based on specific requirements.
 
-const MIN_PASSWORD_LENGTH: usize = 8;
-const MAX_PASSWORD_LENGTH: usize = 16;
+use crate::password_errors::{MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH, PasswordErrors};
 
 /// This function validates a password based on the following rules:
-/// 1. The password must be at least [MIN_PASSWORD_LENGTH] characters long.
-/// 2. The password must not exceed [MAX_PASSWORD_LENGTH] characters.
+/// 1. The password must be at least [`MIN_PASSWORD_LENGTH`] characters long.
+/// 2. The password must not exceed [`MAX_PASSWORD_LENGTH`] characters.
 /// 3. The password must contain at least one lowercase letter.
 /// 4. The password must contain at least one uppercase letter.
 /// 5. The password must contain at least one digit.

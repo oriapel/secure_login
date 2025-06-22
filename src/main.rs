@@ -1,3 +1,7 @@
+//! This is a simple program that validates passwords based on specific requirements.
+//! It checks for length, if the password contains uppercase and lowercase letters,
+//! and also check if it contain at least one digit.
+
 mod password_checker;
 mod password_errors;
 
