@@ -19,3 +19,6 @@ pub enum PasswordErrors {
     #[error("Password is missing a digit!")]
     MissingDigit,
 }
+
+/// This is a type alias for a Result that uses the PasswordErrors enum
+pub type Result<T> = std::result::Result<T, PasswordErrors>;

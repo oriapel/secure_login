@@ -1,6 +1,6 @@
 //! This module provides a function to validate passwords based on specific requirements.
 
-use crate::password_errors::{MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH, PasswordErrors};
+use crate::password_errors::{MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH, PasswordErrors, Result};
 
 /// This function validates a password based on the following rules:
 /// 1. The password must be at least [`MIN_PASSWORD_LENGTH`] characters long.
@@ -9,7 +9,7 @@ use crate::password_errors::{MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH, PasswordE
 /// 4. The password must contain at least one uppercase letter.
 /// 5. The password must contain at least one digit.
 ///
-pub fn validate_password(password: &str) -> Result<(), PasswordErrors> {
+pub fn validate_password(password: &str) -> Result<()> {
     let pswd_len = password.len();
     // First let us validate the length, before anything else, as it
     // does not require us to iterate the password, which makes it the "easiest"
